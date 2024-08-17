@@ -66,10 +66,16 @@
 
         .image-section {
             flex: 1;
-            background-image: url('https://qin.zh.yuazhi.cn/furry.jpg'); 
-            background-size: cover;
-            background-position: center; 
-            display: none; /* 在手机端隐藏图片部分 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
         }
 
         @media (min-width: 768px) {
@@ -90,10 +96,6 @@
             .text-section .button-container a {
                 flex: 1 1 calc(50% - 20px);
                 font-size: 1.2em;
-            }
-
-            .image-section {
-                display: block; /* 只在平板及以上设备显示图片部分 */
             }
         }
 
@@ -124,7 +126,9 @@
                 <a href="https://www.kdocs.cn/">金山文档</a>
             </div>
         </div>
-        <div class="image-section"></div>
+        <div class="image-section">
+            <img src="https://qin.zh.yuazhi.cn/furry.jpg" alt="Background Image">
+        </div>
     </div>
 </body>
 </html>
